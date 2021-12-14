@@ -40,10 +40,10 @@ int main()
     gsl::GenericServiceLocator locator;
 
     {
-        auto s1 = std::make_shared<Service1>();
-        locator.AddService<Service1>(s1);
-        auto s2 = std::make_shared<Service2>();
-        locator.AddService<Service2>(s2);
+        auto ptrS1 = std::make_shared<Service1>();
+        locator.AddService(ptrS1);
+        auto ptrS2 = std::make_shared<Service2>();
+        locator.AddService(ptrS2);
     }
 
     auto& service1 = locator.GetService<Service1>();
