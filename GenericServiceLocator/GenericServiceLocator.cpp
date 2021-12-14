@@ -41,9 +41,9 @@ int main()
 
     {
         auto s1 = std::make_shared<Service1>();
-        locator.AddService<Service1>(s1);
+        locator.AddService(s1);
         auto s2 = std::make_shared<Service2>();
-        locator.AddService<Service2>(s2);
+        locator.AddService(s2);
     }
 
     auto& service1 = locator.GetService<Service1>();
